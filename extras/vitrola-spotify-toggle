@@ -1,0 +1,8 @@
+#!/bin/bash
+# Show or hide the hidden Spotify window (special:spotify); start Spotify if
+# it is not running. Used by Super+Shift+M (see ~/.config/hypr/bindings.lua).
+if pgrep -x spotify >/dev/null; then
+  hyprctl dispatch 'hl.dsp.workspace.toggle_special("spotify")' >/dev/null
+else
+  exec uwsm-app -- spotify
+fi

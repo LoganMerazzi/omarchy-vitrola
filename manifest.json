@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "logan.vitrola",
+  "name": "Vitrola",
+  "version": "0.1.0",
+  "author": "logan",
+  "license": "MIT",
+  "description": "Spotify player in the shape of a record player, painted with the Omarchy theme.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Vitrola",
+    "description": "Spinning mini record with the current Spotify track; opens the record player.",
+    "category": "Media",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "maxTitleWidth": 180
+    },
+    "schema": [
+      {
+        "key": "maxTitleWidth",
+        "type": "integer",
+        "label": "Max title width",
+        "min": 60,
+        "max": 400,
+        "step": 10,
+        "defaultValue": 180
+      }
+    ]
+  }
+}
