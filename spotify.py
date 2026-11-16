@@ -13,6 +13,7 @@ client secret) and prints JSON for Panel.qml. Standard library only.
 
 import base64
 import hashlib
+import html
 import http.server
 import json
 import os
@@ -146,7 +147,7 @@ def login(client_id):
             self.send_header("Content-Type", "text/html; charset=utf-8")
             self.end_headers()
             msg = "Vitrola conectada ao Spotify. Pode fechar esta aba." if ok else "Falha no login: " + text(result.get("error"))
-            self.wfile.write(f"<html><body style='font-family:sans-serif;padding:3em'><h2>{msg}</h2></body></html>".encode())
+            self.wfile.write(f"<html><body style='font-family:sans-serif;padding:3em'><h2>{html.escape(msg)}</h2></body></html>".encode())
 
         def log_message(self, *args):
             pass
