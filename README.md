@@ -2,6 +2,8 @@
 
 Plugin do [Omarchy shell](https://omarchy.org) que mostra o Spotify como uma vitrola: madeira, metal escovado e as cores do tema atual.
 
+![Vitrola: o toca-discos aberto pela barra, com o caixote de discos ao lado](screenshots/vitrola.png)
+
 - **Barra:** um disquinho girando com a música atual.
 - **Painel:** toca-discos completo. Arraste o braço para avançar na música, gire o botão para mudar o volume, e o disco é trocado com animação quando a faixa muda. A janela pode ser destacada e ficar flutuando.
 - **Caixote de discos:** suas playlists, álbuns, artistas e busca pela Web API do Spotify, para escolher o que tocar.
